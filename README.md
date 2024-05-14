@@ -20,4 +20,5 @@ This project aims to address the challenges faced by the public transit system i
 - **Data Analysis**: Conduct comprehensive analysis to explore current transit trends and demography.
 - **Predictions**: Modeling and predicting future riderships.
 - **Recommendations**: Provide recommendations to improve transit system.
-
+## Final Output
+The final codes can be found in this github repository, while visualization can be accessed through https://clausa.app.carto.com/map/e68073f4-05c0-42ea-b1c0-baaf48332c4b
