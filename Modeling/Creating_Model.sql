@@ -5,13 +5,31 @@ SELECT
   TotalPop,
   MedHHInc,
   MedRent,
+  Commutetowork,
   PopDensity_km2,
+  TotalWorker,
   pctWhite,
   pctAfricanamerican,
   pctAsian,
+  pctOther,
   pctMale,
+  pctFemale,
   pctBachelors,
-  latitude,
-  longitude
+  pctWorker,
+  pctPoverty,
+  pctworkwithbus,
+  pctworkfromhome,
+  pctworkbycar,
+  pctworkbytaxi,
+  pctworkbymotor,
+  pctworkbybike,
+  pctworkbywalk,
+  pctnocar,
+  pct1car,
+  pct2car,
+  pct3car,
+  pct4car,
+  pct5car
+
 FROM
-  `data_lake.census_2022_V2 `;
+  `musa509-final-charlotte.data_lake.census_2022_V2`;
