@@ -1,22 +1,41 @@
-CREATE OR REPLACE TABLE `data_lake.avg_ridership_predictions` AS
 SELECT
-  *,
+  predicted_avg_ridership,
+  *
 FROM
   ML.PREDICT(MODEL `data_lake.avg_ridership_prediction`,
     (
       SELECT
+        Stop_ID,
         TotalPop,
-        CAST(MedHHInc AS STRING) AS MedHHInc, -- Ensure MedHHInc is cast to STRING if model expects it that way
+        MedHHInc,
         MedRent,
+        Commutetowork,
         PopDensity_km2,
+        TotalWorker,
         pctWhite,
         pctAfricanamerican,
         pctAsian,
+        pctOther,
         pctMale,
+        pctFemale,
         pctBachelors,
-        latitude,
-        longitude
+        pctWorker,
+        pctPoverty,
+        pctworkwithbus,
+        pctworkfromhome,
+        pctworkbycar,
+        pctworkbytaxi,
+        pctworkbymotor,
+        pctworkbybike,
+        pctworkbywalk,
+        pctnocar,
+        pct1car,
+        pct2car,
+        pct3car,
+        pct4car,
+        pct5car,
+        WKT_geometry
       FROM
-        `data_lake.census_2022_V2 `
+        `musa509-final-charlotte.data_lake.census_2022_test`
     )
-  )
+  );
